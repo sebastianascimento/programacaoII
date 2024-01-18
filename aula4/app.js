@@ -1,4 +1,7 @@
 
+import Car from "./Car.js";
+import Motorcycle from "./Motorcycle.js";
+
 let a = 1;
 let b = 0;
 
@@ -44,6 +47,12 @@ class User {
         return this.age;
     }
 
+    set #name(value) {
+        this.#name = value;
+    }
+    get name() {
+        return this.#name;
+    }
     
 }
 
@@ -58,21 +67,13 @@ for(const key in user) {
     console.log(key);
 }
 
-const originObject = {
-    key1: Value1,
-    key2: Value2,
-    key3: Value3,
-}
 
-const transformedArray = entriesArray.map([key , value]) => {
-    return {
-        origin: key,
-        value: value,
-        transformedValue: value,
-    }
-}
 
-console.log(transformedArray());
+const car = new Car();
+const motorcycle = new Motorcycle();
+
+
+
 
 
 
