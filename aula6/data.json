@@ -1,0 +1,22 @@
+
+[
+        {
+        "type": "car",
+        "brand": "fiat",
+        "speed": 50,
+        "image": "image/fiat.jpeg"
+        },
+
+        {
+        "type": "motorcycle",
+        "brand": "kawazaki",
+        "speed": 600,
+        "image": "image/kawazaki.jpeg"
+        },
+        {
+            "type": "boat",
+            "brand": "titanic",
+            "speed": 2000
+        } 
+     
+]
