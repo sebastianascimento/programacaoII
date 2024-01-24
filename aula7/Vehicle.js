@@ -1,7 +1,4 @@
-
-
- export default class Veiculo {
-
+export default class Vehicle {
     speed = 10;
     brand;
     imagePath;
@@ -16,14 +13,11 @@
         this.imagePath = data.image;
 
         this.build();
-        
     }
-
     animate () {
-        this.#yPos += 0.04;
-        console.log(this.#yPos);
-        this.#image.style.transform= 'translateY(${this.#yPos})';
 
+        this.#yPos += 1;
+        this.#image.style.transform = `translateY(${this.#yPos}px)`;
     }
 
     build(){
