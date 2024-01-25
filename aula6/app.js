@@ -1,15 +1,16 @@
     import Car from "./Car.js";
     import Motorcycle from "./Motorcycle.js";
-    import Boat from "./boat.js";
+    import Boat from "./Boat.js";
 
 
+    let currentVeiuclo;
 
 
 const loadData = async (url) => {
         
     const request = await fetch(url);
     const result = await request.json();
-    console.log(result);
+
 
     return result;
 
@@ -21,16 +22,22 @@ const createLiContent = (item) => {
     button.innerText = item.brand;
     
     button.onclick = () => {
+        if (currentVeiuclo) {
+            currentVeiuclo.destroy ();
+        }
+
             switch (item.type) {
                 case "car":
-                    new Car(item);
+                   currentVeiuclo = new Car(item);
                     break;
                 case "motorcycle":
-                    new Motorcycle(item);
+                   currentVeiuclo = new Motorcycle(item);
                     break;
                 case "boat":
-                    new Boat(itme);
+                   currentVeiuclo = new Boat(item);
+                    break;
             }
+            console.log(currentVeiuclo);
         console.log(item);
     }
 
@@ -51,8 +58,9 @@ const createList = (data) => {
 
 } 
 window.onload = async () => {
+    
     const data =  await loadData("data.json");
-    data.sort((a , b) => a.type.localCompare(b.type));
+    data.sort((a , b) => a.type.localeCompare(b.type));
 
     const ul = createList(data);
 }

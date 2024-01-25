@@ -4,7 +4,9 @@
 
     speed = 10;
 
-    constructor(){
+    constructor(data){
+        this.speed = data.speed;
+        this.brand = data.brand;
         
     }
 

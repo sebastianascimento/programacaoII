@@ -6,16 +6,23 @@
 
         large.onclick = () => {
             
-            small.dispatchEvent(new CustomEvent ('div-click'));
+            small.dispatchEvent(new CustomEvent ('small-event'));
 
         }
         
-        small.addEventListener ("div-click" , () => {
-            console.log("div clicked");
+        small.addEventListener ("small-event" , () => {
+            console.log("large clicked");
         })
-
-        
-    
     }
 
 
+    class Test {
+        constructor () {
+
+        }
+
+         async onDataLoad() {
+            cosnt req = await 
+            this.dispatchEvent()
+        }
+    }

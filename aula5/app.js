@@ -6,7 +6,7 @@ const data = {
 
     car: [
         {
-        brand: "ferari",
+        brand: "ferrari",
         speed: 100,
         },
 
@@ -17,7 +17,7 @@ const data = {
     ],
     motorcycle: [
         {
-        brand: "yamha",
+        brand: "yamaha",
         speed: 100,
         },
         {

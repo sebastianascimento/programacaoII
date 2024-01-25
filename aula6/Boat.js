@@ -6,7 +6,6 @@ import  Veiculo from "./Veiculo.js";
     constructor(data) {
         super(data);
 
-        this.speed = 20;
         console.log(this.brand ,this.speed);
     }
 }
