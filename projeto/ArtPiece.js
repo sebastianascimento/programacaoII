@@ -30,7 +30,7 @@ export default class ArtPiece {
     }
 
     introduce() {
-        return  this.#data.valueTicket;
+        return  this.#data.title;
     }
     show () {
         this.view.style.display = "initial";
