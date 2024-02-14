@@ -1,0 +1,137 @@
+
+
+body {
+  background-color: black;
+}
+
+.name{
+  color: white;
+  text-align: center;
+  font-family: 'Protest Revolution', sans-serif;
+}
+img {
+  width: 500px;
+  height: 500px;
+  margin-left: 150px;
+  margin-right: 400px;
+  margin-top: 100px;
+  border-radius: 40px;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slide {
+  display: flex;
+}
+
+.slides {
+  display: flex;
+}
+
+.slides img {
+  width: 100%;
+  height: auto; 
+  max-width: 800px; 
+}
+
+
+.prev, .next {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  color: #000;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: #0af6fa;
+  box-shadow: 0px 15px 20px rgba(13, 240, 252, 0.4);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1); 
+}
+
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: white;
+}
+
+.info {
+ padding: 1.3em 3em;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 2.5px;
+ font-weight: 500;
+ color: #000;
+ background-color: #fff;
+ border: none;
+ border-radius: 45px;
+ box-shadow: 0px 8px 15px rgba(0 , 0 , 0 , 0.1);
+ transition: all 0.3s ease 0s;
+ cursor: pointer;
+ outline: none;
+ margin-left: 850px;
+ margin-top: 80px;
+ font-family: 'Kanit', sans-serif;
+}
+
+.info:hover {
+  background-color: #0af6fa;
+  box-shadow: 0px 15px 20px rgba(13 , 240 , 252 , 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.image-info {
+  background-color: black; 
+  padding: 10px; 
+  width: 600px;
+  height: 300px;
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  margin-left: 650px;
+  margin-top: 50px; 
+  font-family: 'Protest Revolution', sans-serif; 
+  font-size: 25px;
+  color: white; 
+}
+

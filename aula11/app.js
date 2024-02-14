@@ -1,7 +1,5 @@
 
-import AudioPlayer from "./AudioPlayer.js";
 import Zoo from "./Zoo.js";
-
 
 window.onload = async () => {
 
@@ -10,13 +8,10 @@ window.onload = async () => {
     const request = await fetch("data.json");
     const result = await request.json();
 
-    const zoo = new Zoo((animal) => {
-        audioPlayer.play(animal.sound);
+    const zoo = new Zoo(() => {
+        console.log("zoo event");
     });
     result.forEach(item => {
         zoo.addAnimal(item);
     });
-
-    const audioPlayer = new AudioPlayer();
-
 }

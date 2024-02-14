@@ -6,7 +6,6 @@ export default class Zoo {
 
     #animals;
     #callback;
-    #currentAnimal = null ;
     constructor(callback) {
         this.#animals = [];
         this.#callback = callback;
@@ -15,26 +14,18 @@ export default class Zoo {
     addAnimal(animal) {
         switch (animal.type) {
             case "bird":
-                this.#animals.push(new Bird(animal, () => this.#performAnimal(animal)));
+                this.#animals.push(new Bird(animal, this.#callback));
                 break;
             case "mammal":
-                this.#animals.push(new Mammal(animal, () => this.#performAnimal(animal)));
+                this.#animals.push(new Mammal(animal, this.#callback));
                 break;
             case "reptile":
-                this.#animals.push(new Reptile(animal, () => this.#performAnimal(animal)));
+                this.#animals.push(new Reptile(animal, this.#callback));
                 break;
             default:
                 break;
         }
     }
-
-    #performAnimal (animal) {
-        this.#currentAnimal = this.#animals.find(anim => anim.name === animal.name);    
-        
-        this.#callback();
-    }
-
-
 
     showAnimals() {
         this.#animals.forEach(animal => {

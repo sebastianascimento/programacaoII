@@ -51,3 +51,16 @@
     }
 
     
+    class Test  {
+        constructor() {
+
+        }
+
+        showNumber() {
+            return 2;
+        }
+    }
+
+    const test = new Test();
+    console.log(test.showNumber());
+    

@@ -1,3 +1,35 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+#images-container {
+    flex: 1;
+    overflow: scroll;
+
+}
+
+#audio-container {
+    display: flex;
+    flex: 1;
+    min-height: 90px;
+}
+button {
+    flex: 1;
+}
+
 img {
     width: 100%;
 }
+
